@@ -42,40 +42,32 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.model.Task
-import com.example.androiddevchallenge.ui.theme.taupe100
+import com.example.androiddevchallenge.model.Task
+import com.example.androiddevchallenge.repo.TaskRepo
 import dev.chrisbanes.accompanist.coil.CoilImage
-import uk.co.barbuzz.adoptapup.repo.TaskRepo
+
 
 @Composable
 fun MainScreen() {
     val taskCollections1: List<Task> = TaskRepo().getCollection1Tasks()
     val taskCollections2: List<Task> = TaskRepo().getCollection2Tasks()
-    val taskBody: List<Task> = TaskRepo().getBodyTasks()
-    val taskMind: List<Task> = TaskRepo().getMindTasks()
-
-    var search by remember { mutableStateOf("") }
+    val taskBody = TaskRepo().getBodyTasks()
+    val taskMind = TaskRepo().getMindTasks()
 
     Scaffold(
-        //Modifier.navigationBarsPadding(),
         bottomBar = { MainBottomNavigation() },
         floatingActionButton = {
             FloatingActionButton(
-                onClick = {  },
+                onClick = { },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
                 Icon(
@@ -102,7 +94,7 @@ fun MainScreen() {
                     .height(56.dp)
                     .padding(end = 16.dp)
                     .focusable(enabled = true),
-                onValueChange = { search = it },
+                onValueChange = { },
                 vectorImageId = R.drawable.ic_search_24px,
                 tint = MaterialTheme.colors.onSurface
             )
@@ -114,17 +106,21 @@ fun MainScreen() {
                 style = MaterialTheme.typography.h2
             )
             Spacer(Modifier.height(8.dp))
-            LazyRow(content = {
-                items(taskCollections1) { task ->
-                    TaskCollectionListItem(task)
+            LazyRow(
+                content = {
+                    items(taskCollections1) { task ->
+                        TaskCollectionListItem(task)
+                    }
                 }
-            })
+            )
             Spacer(Modifier.height(8.dp))
-            LazyRow(content = {
-                items(taskCollections2) { task ->
-                    TaskCollectionListItem(task)
+            LazyRow(
+                content = {
+                    items(taskCollections2) { task ->
+                        TaskCollectionListItem(task)
+                    }
                 }
-            })
+            )
             Spacer(Modifier.height(32.dp))
             Text(
                 modifier = Modifier.fillMaxWidth(),
@@ -133,11 +129,13 @@ fun MainScreen() {
                 style = MaterialTheme.typography.h2
             )
             Spacer(Modifier.height(8.dp))
-            LazyRow(content = {
-                items(taskBody) { task ->
-                    TaskBodyListItem(task)
+            LazyRow(
+                content = {
+                    items(taskBody) { task ->
+                        TaskBodyListItem(task)
+                    }
                 }
-            })
+            )
             Spacer(Modifier.height(32.dp))
             Text(
                 modifier = Modifier.fillMaxWidth(),
@@ -146,11 +144,13 @@ fun MainScreen() {
                 style = MaterialTheme.typography.h2
             )
             Spacer(Modifier.height(8.dp))
-            LazyRow(content = {
-                items(taskMind) { task ->
-                    TaskBodyListItem(task)
+            LazyRow(
+                content = {
+                    items(taskMind) { task ->
+                        TaskBodyListItem(task)
+                    }
                 }
-            })
+            )
         }
     }
 }

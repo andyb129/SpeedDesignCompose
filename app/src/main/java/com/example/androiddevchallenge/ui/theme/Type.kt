@@ -23,13 +23,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.R
 
-val KulimPark= FontFamily(
+val KulimPark = FontFamily(
     Font(R.font.kulimpark_regular),
     Font(R.font.kulimpark_light, FontWeight.W500),
     Font(R.font.kulimpark_bold, FontWeight.Bold)
 )
 
-val Lato= FontFamily(
+val Lato = FontFamily(
     Font(R.font.latoregular),
     Font(R.font.latolight, FontWeight.W500),
     Font(R.font.latobold, FontWeight.Bold)

@@ -24,21 +24,31 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Spa
 import androidx.compose.runtime.Composable
-import com.example.androiddevchallenge.ui.theme.rust600
-import com.example.androiddevchallenge.ui.theme.taupe100
 
 @Composable
 fun MainBottomNavigation() {
     BottomNavigation(backgroundColor = MaterialTheme.colors.background) {
         BottomNavigationItem(
-            icon = { Icon(imageVector = Icons.Filled.Spa, contentDescription = null, tint = MaterialTheme.colors.onBackground) },
-            label = { Text(text ="HOME", color = MaterialTheme.colors.onBackground) },
+            icon = {
+                Icon(
+                    imageVector = Icons.Filled.Spa,
+                    contentDescription = null,
+                    tint = MaterialTheme.colors.onBackground
+                )
+            },
+            label = { Text(text = "HOME", color = MaterialTheme.colors.onBackground) },
             selected = true,
             onClick = { }
         )
         BottomNavigationItem(
-            icon = { Icon(Icons.Filled.AccountCircle, contentDescription = null, tint = MaterialTheme.colors.onBackground) },
-            label = { Text(text ="PROFILE", color = MaterialTheme.colors.onBackground) },
+            icon = {
+                Icon(
+                    Icons.Filled.AccountCircle,
+                    contentDescription = null,
+                    tint = MaterialTheme.colors.onBackground
+                )
+            },
+            label = { Text(text = "PROFILE", color = MaterialTheme.colors.onBackground) },
             selected = false,
             onClick = { }
         )

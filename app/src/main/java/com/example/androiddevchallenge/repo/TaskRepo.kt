@@ -13,10 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.co.barbuzz.adoptapup.repo
+package com.example.androiddevchallenge.repo
 
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.model.Task
+import com.example.androiddevchallenge.model.Task
 
 class TaskRepo {
 

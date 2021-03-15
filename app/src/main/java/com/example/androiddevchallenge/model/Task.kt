@@ -13,19 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.composables
+package com.example.androiddevchallenge.model
 
-import androidx.compose.material.Scaffold
-import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
-
-@Composable
-fun AppBarScaffold(
-    screenTitle: String,
-    navController: NavController? = null,
-    content: @Composable () -> Unit
-) {
-    Scaffold() {
-        content()
-    }
-}
+data class Task(
+    val title: String,
+    val imageUrl: String,
+    val imageResourceId: Int
+)

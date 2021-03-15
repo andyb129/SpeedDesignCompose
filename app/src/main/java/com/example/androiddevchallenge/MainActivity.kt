@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         setContent {
-            MyTheme(darkTheme = true) {
+            MyTheme(darkTheme = false) {
                 ProvideWindowInsets {
                     MyApp()
                 }

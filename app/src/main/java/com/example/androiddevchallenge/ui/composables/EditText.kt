@@ -58,8 +58,10 @@ fun EditText(
         ),
         singleLine = true,
         maxLines = 1,
-        leadingIcon = { if (vectorImageId != null) {
-            Icon(imageVector = Icons.Filled.Search, contentDescription = null, tint = tint)
-        } }
+        leadingIcon = {
+            if (vectorImageId != null) {
+                Icon(imageVector = Icons.Filled.Search, contentDescription = null, tint = tint)
+            }
+        }
     )
 }
