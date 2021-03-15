@@ -8,6 +8,9 @@
 ## :scroll: Description
 This app implements the design brief set in week 3 of the Compose Android Dev Challenge
 
+The competition was to complete this as fast as you could, but I decided to just do it in my
+own time and learn a bit more about compose.
+
 All UI is written in Compose for week 3 of the Android Dev Challenge: Compose [#AndroidDevChallenge](https://developer.android.com/dev-challenge)
 
 Designs can be found here ~> [https://github.com/android/android-dev-challenge-compose/blob/assets/MySoothe.zip](https://github.com/android/android-dev-challenge-compose/blob/assets/MySoothe.zip)
