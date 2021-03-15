@@ -25,9 +25,11 @@ Great to implement a design from a spec with multiple elements including things 
 ## :camera_flash: Screenshots
 
 **Light Theme**
+
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">&emsp;<img src="/results/screenshot_3.png" width="260">
 
 **Dark Theme**
+
 <img src="/results/screenshot_1_dark.png" width="260">&emsp;<img src="/results/screenshot_2_dark.png" width="260">&emsp;<img src="/results/screenshot_3_dark.png" width="260">
 
 ## License
